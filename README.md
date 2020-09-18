@@ -25,10 +25,8 @@ If you would rather use something other than Visual Studio
 
 # Features you will implement
 
-- Setup the Customer.ASPNETCore.UI website to use the buildin .NET Dependency Injection
-- Create the ability to view your wishlist
-- Create the ability add items to your wish list
-- Create the ability to remove items from your wishlist
+- Change the Customer.ASPNETCore.UI website to inject into the Counter page an Interface of a SiteCounter
+- Add a Singleton lifetime serivce of this SiteCounter into your website.
 
 ## Tasks necessary to complete implementation:
 
