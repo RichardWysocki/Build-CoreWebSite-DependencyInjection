@@ -13,7 +13,7 @@ If you want to use Visual Studio (highly recommended) follow the following steps
 -   If you need to install visual studio download it at https://visualstudio.microsoft.com/ (If you're using Windows you'll want to check "ASP.NET" and ".NET Core cross-platform development" on the workloads screen during installation.)
 -   To run the application simply press the Start Debugging button (green arrow) or press F5
 -   If you're using Visual Studio on Windows, to run tests open the Test menu, click Run, then click on Run all tests (results will show up in the Test Explorer)
--   If you're using Visual Studio on macOS, to run tests, select the WishListTests Project, then go to the Run menu, then click on Run Unit Tests (results will show up in the Unit Tests panel)
+-   If you're using Visual Studio on macOS, to run tests, select the Customer.ASPNETCore.UI Project, then go to the Run menu, then click on Run Unit Tests (results will show up in the Unit Tests panel)
 
 (Note: All tests should fail! It's ok. This is supposed to happen. As you complete the project, more of the tests will pass. When you complete the project, **all** tests should pass)
 
@@ -43,9 +43,9 @@ __Note:__ this isn't the only way to accomplish this, however; this is what the 
 			- [ ] Call the 'AddCounter' method on the '_siteCounter' field to increase the counter by 1.
 			- [ ] Modify the 'Counter' property to get the counter from the 'GetCounter' method from the '_siteCounter' field.
 			- [ ] Remove the existing process to increase the Counter variable. 
-	- [ ] Add the Dependency Injection interface & concrete implmentations in the solution
+	- [ ] Register the 'ISiteCounter' service with the concrete Implmentation  
 		- [ ] In the `Startup.cs` file add support for dependency types
-			- [ ] In the `ConfigureServices` method call `AddSingleton` on `services` to add support the ISiteCounter interface to the Concrete implementation of SiteCounter .
+			- [ ] In the `ConfigureServices` method call `AddSingleton` on `services` to add support for the 'ISiteCounter' interface to the Concrete implementation of 'SiteCounter'.
 			- [ ] Import in the missing reference to the Business.Shared library (_Note_ : Alt+Enter)
 	- Note: The application is now viewable in your browser!
 
