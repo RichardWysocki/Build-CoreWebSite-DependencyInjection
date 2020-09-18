@@ -1,0 +1,22 @@
+﻿@page
+@model Customer.ASPNETCore.UI.Pages.CarListViewModel
+
+<h3>Car List</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Make</th>
+            <th>Model</th>
+        </tr>
+    </thead>
+    @foreach (var car in Model.Cars)
+    {
+        <tr>
+            <td width="100">@car.Brand</td>
+            <td width="100">@car.Make</td>
+            <td width="100">@car.Model</td>
+        </tr>
+    }
+</table>
