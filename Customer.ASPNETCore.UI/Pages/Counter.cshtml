@@ -3,18 +3,20 @@
 
 <h1>Counter</h1>
 
-Welcome to the Dependency Injection example.
+<p>Welcome to the Dependency Injection example.</p>
 
 <p>Current count: @Model.Counter</p>
 
 <form method="post"><button class="btn btn-primary">Click me</button></form>
-
-Welcome to the Counter Dependency Injection example. 
-
-If you are running this solution prior to making any changes, you will see we are not setting the 'Counter' variable to anything.  Each time you hit the 'Click me' button, the counter value is 
-0 and we increase it by 1 so the Current count becomes 1.  
-
-Once you add in the changes to the solution, you will be injecting into the solution a Singleton of the ISiteCounter class.  Since this is a singleton, it will retain its value per page number and 
-each time you hit the 'Click me' button, the Current count will increase.  
+<br />
+<b>Welcome to the Counter Dependency Injection example. </b>
+<br />
+<p>If you are running this solution prior to making any changes, you will see we are not setting the 'Counter' variable to anything.  Each time you hit the 'Click me' button, the counter value is
+    0 and we increase it by 1 so the Current count becomes 1.</p>
+    <br />
+    <p>
+        Once you add in the changes to the solution, you will be injecting into the solution a Singleton service lifetime instance of 'ISiteCounter'.  Since this is a singleton, it will retain its value per page number and
+        each time you hit the 'Click me' button, the Current count will increase.
+    </p>
 
 
