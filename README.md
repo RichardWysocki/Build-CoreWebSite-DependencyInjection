@@ -25,28 +25,27 @@ If you would rather use something other than Visual Studio
 
 # Features you will implement
 
-- Change the Customer.ASPNETCore.UI website to inject into the Counter page an Interface of a SiteCounter
-- Add a Singleton lifetime serivce of this SiteCounter into your website.
+- Use Dependency Injection to inject into the Counter page an Interface object
+- Add a Singleton lifetime serivce to the website to increase the hit counter on the page. 
 
 ## Tasks necessary to complete implementation:
 
 __Note:__ this isn't the only way to accomplish this, however; this is what the project's tests are expecting. Implementing this in a different way will likely result in being marked as incomplete / incorrect.
 
 - [ ] Adding in Dependency Injection to an ASP.NET Core Application
-	- [ ] Reconfigure the 'Counter.chtml' razor page for dependency Injection
-		- [ ] Inject in the counter class object to the `Counter.chtml.cs` file.
-			- [ ] Add a new private readonly property called '_siteCounter' of type 'ISiteCounter'.
-			- [ ] Import in the missing using reference to the 'Business.Shared' library
+	- [ ] Reconfigure the 'Counter.cshtml' razor page for dependency Injection
+		- [ ] Inject in the 'ISiteCounter' object into the `Counter.cshtml.cs` file.
+			- [ ] Add a new private readonly property called '_siteCounter' of type 'ISiteCounter'. (Note : You'll need to add a using statement for Business.Shared)
 			- [ ] Add a Constructor that accepts a parameter of type `ISiteCounter` named 'siteCounter'. 
 			- [ ] Initialize the '_siteCounter' field with the 'siteCounter' paramter value within the Constructor
-		- [ ] In the `OnPost` method within the `Counter.chtml.cs` file add support for increasing the counter and setting the Counter property.
+		- [ ] In the `OnPost` method within the `Counter.cshtml.cs` file add support for increasing the counter and setting the Counter property.
 			- [ ] Call the 'AddCounter' method on the '_siteCounter' field to increase the counter by 1.
-			- [ ] Modify the 'Counter' property to get the counter from the 'GetCounter' method from the '_siteCounter' field.
+			- [ ] Modify the 'Counter' property to get the new current counter value from the 'GetCounter' method from the '_siteCounter' field.
 			- [ ] Remove the existing process to increase the Counter variable. 
 	- [ ] Register the 'ISiteCounter' service with the concrete Implmentation  
 		- [ ] In the `Startup.cs` file add support for dependency types
 			- [ ] In the `ConfigureServices` method call `AddSingleton` on `services` to add support for the 'ISiteCounter' interface to the Concrete implementation of 'SiteCounter'.
-			- [ ] Import in the missing reference to the Business.Shared library (_Note_ : Alt+Enter)
+			- [ ] Import in the missing reference to the Business.Shared library (_Note_ : Short-Cut with Visual Studio - Alt+Enter)
 	- Note: The application is now viewable in your browser!
 
 
